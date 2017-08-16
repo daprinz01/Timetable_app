@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="GenerateTimetable.aspx" />
     <Content Include="packages.config" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Timetable.Master" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
