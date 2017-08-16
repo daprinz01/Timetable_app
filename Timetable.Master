@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Timetable.master.cs" Inherits="Timetable_app.Timetable" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> | Time Table App</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/my-styles.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="Index.aspx">Timetable App</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-left">
+                        <li><a runat="server" href="~/index.aspx">Set Timetable</a></li>
+                        <li><a runat="server" href="~/GenerateTimetable.aspx">Generate</a></li>
+                        <li><a runat="server" href="~/ViewTimetable.aspx">View Timetable</a></li>    
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+        <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

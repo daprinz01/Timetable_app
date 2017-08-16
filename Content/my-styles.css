@@ -1,0 +1,10 @@
+﻿body {
+}
+h1,h2,h3,h4,h5,h6,label{
+    font-family:'Monotype Corsiva';
+    color:gray;
+}
+.space{
+    margin-left:1px;
+    margin-right:1px;
+}
