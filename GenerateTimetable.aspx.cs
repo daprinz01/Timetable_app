@@ -27,7 +27,9 @@ namespace Timetable_app
             try
             {
                 TimetableDBContext context = new TimetableDBContext();
+                //recreate the GenTimetable DB to delete all old entries
                 context.GenTimetable.Create();
+                //initialize a list of all subject
                 List<TimetableDB> orderSubjects = context.TimetableDB.OrderByDescending(m => m.TPW).Where(m => m.TPW != 0).ToList();
                 List<string> daysOfWeek = new List<string>();
                 daysOfWeek.Add("Monday");
@@ -43,6 +45,7 @@ namespace Timetable_app
                 //we are assuming the day ends by 4PM using the 24HRs clock for easier calculation
                 try
                 {
+                    //create time table as long as there are subjects remaining and the number of times per week is not 0 for the any of the subjects
                     while (orderSubjects.Count != 0)
                     { 
                      orderSubjects = context.TimetableDB.OrderByDescending(m => m.TPW).Where(m => m.TPW != 0).ToList();
